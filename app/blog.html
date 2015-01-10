@@ -13,7 +13,7 @@ permalink: blog/
 				<li>
 					<a class="thumb" href="{{site.baseurl}}{{ post.url }}"><img src="/img/blogThumbs/{{ post.img }}" alt="{{ post.name }}" width="279" height="92" /></a>
 					<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.name }}</a></h4>
-					<p>{{ post.date }}</p>
+					<p><time>{{ post.date }}</time></p>
 				</li>
 			{% endfor %}
 		</ul>

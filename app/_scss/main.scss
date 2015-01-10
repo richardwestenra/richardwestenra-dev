@@ -353,48 +353,60 @@ body {
         }
     }
     &.post {
+        $blogWidth: 279px * 1.1;
         li {
-            @include clearfix;
-            clear: both;
-            padding: 0 0 25px;
-            @media screen and (min-width: $m_small){
-                padding: 15px;
-                background: rgba(#fff,0.4);
-                &:nth-child(even){
-                    background: rgba(#fff,0.2);
+            padding: 10px;
+            border: 2px solid $c_bg;
+            background: mix($c_bg,$c_opposite,40%);
+        }
+        @media (min-width: $blogWidth*2) {
+            max-width: none;
+            ul {
+                margin: -3px;
+            }
+            li {
+                float: left;
+                clear: none;
+                height: 200px;
+                max-height: 220px;
+                border-width: 5px;
+            }
+        }
+        li {
+            @for $i from 2 through 4 {
+                $m_blogWidth: $blogWidth * $i;
+                @media (min-width: $m_blogWidth) {
+                    width: (100%/$i);
+                    height: 200px;
+                    height: calc(200px + 10vw - #{$i * 38px});
                 }
             }
             p {
                 margin: 0;
-                font-size: 0.9em;
+                font-size: 0.7em;
                 text-transform: uppercase;
+                color: mix($c_base,$c_bg,60%);
             }
         }
-            .thumb {
-                display: block;
-                @media (min-width: $m_small){
-                    width: 279px;
-                    float: left;
-                    margin-right: 1em;
-                }
-                img {
-                    width: 100%;
-                    height: auto;
+        .thumb {
+            display: block;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        h4 {
+            margin: 0.6em 0 0.2em;
+            font-size: 1em;
+            @include sansSerif;
+            font-weight: bold;
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
                 }
             }
-            h4 {
-                margin: 0.6em 0 0.2em;
-                @media (min-width: $m_small){
-                    margin: 0.3em 1em;
-                }
-                font-size: 1.2em;
-                a {
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
+        }
     }
 }
 

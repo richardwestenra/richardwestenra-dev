@@ -7,15 +7,32 @@ permalink: blog/
 <main class="wrapper">
 	<article class="post blog wrapper-small">
 		<h2>Blog archive</h2>
-		<p>A collection of stuff (articles, tools, toys, prototypes, etc.) that I've created.</p>
-		<ul>
-			{% for post in site.data.blog %}
-				<li>
-					<a class="thumb" href="{{site.baseurl}}{{ post.url }}"><img src="/img/blogThumbs/{{ post.img }}" alt="{{ post.name }}" width="279" height="92" /></a>
-					<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.name }}</a></h4>
-					<p>{{ post.date }}</p>
-				</li>
-			{% endfor %}
-		</ul>
+		<p>I've separated my blog posts into two sections: <a href="#work" class="scroll">Work</a> and <a href="#play" class="scroll">Play</a>:</p>
+		<section id="play">
+			<h3>Play</h3>
+			<p>A diverse collection of articles, tools, toys, experiments, and anything else that took my fancy at the time.</p>
+			<ul>
+				{% for post in site.data.blog %}{% unless post.work %}
+					<li>
+						<a class="thumb" href="{{site.baseurl}}{{ post.url }}"><img src="/img/blogThumbs/{{ post.img }}" alt="{{ post.name }}" width="279" height="92" /></a>
+						<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.name }}</a></h4>
+						<p>{{ post.date }}</p>
+					</li>
+				{% endunless %}{% endfor %}
+			</ul>
+		</section>
+		<section id="work">
+			<h3>Work</h3>
+			<p>Blog posts about web development and design.</p>
+			<ul>
+				{% for post in site.data.blog %}{% if post.work %}
+					<li>
+						<a class="thumb" href="{{site.baseurl}}{{ post.url }}"><img src="/img/blogThumbs/{{ post.img }}" alt="{{ post.name }}" width="279" height="92" /></a>
+						<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.name }}</a></h4>
+						<p>{{ post.date }}</p>
+					</li>
+				{% endif %}{% endfor %}
+			</ul>
+		</section>
 	</article>
 </main>

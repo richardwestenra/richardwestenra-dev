@@ -3,6 +3,7 @@
   url: automating-git-deployment/
   img: code.png
   date: February 2015
+  work: true
   featured: false
 
 - name: "Adding non-core feature-detects with Grunt-Modernizr"
@@ -10,6 +11,7 @@
   url: grunt-modernizr/
   img: code.png
   date: February 2015
+  work: true
   featured: false
 
 - name: "Case Study: Redesigning the Arcus mobile app"
@@ -17,6 +19,7 @@
   url: arcus-redesign/
   img: arcus.png
   date: January 2015
+  work: true
   featured: false
 
 - name: ISS Screensaver

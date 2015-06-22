@@ -5,31 +5,47 @@ description: A collection of stuff that I've made or written.
 permalink: blog/
 ---
 <main class="wrapper">
-	<article class="post blog wrapper-small">
-		<h2>Blog archive</h2>
-		<p>I've separated my blog posts into two sections: <a href="#work" class="scroll">Work</a> and <a href="#play" class="scroll">Play</a>:</p>
-		<section id="play">
-			<h3>Play</h3>
-			<p>A diverse collection of articles, tools, toys, experiments, and anything else that took my fancy at the time.</p>
+	<article class="post blog">
+		<h2>Archive</h2>
+		<p>I've separated my content into three sections: <a href="#projects" class="scroll">Projects</a>, <a href="#stories" class="scroll">Stories</a>, and <a href="#articles" class="scroll">Articles</a>.</p>
+
+		<section id="projects">
+			<h3>Projects</h3>
 			<ul>
-				{% for post in site.data.blog %}{% unless post.work %}
-					<li>
-						<a class="thumb" href="{{site.baseurl}}{{ post.url }}"><img src="/img/blogThumbs/{{ post.img }}" alt="{{ post.name }}" width="279" height="92" /></a>
-						<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.name }}</a></h4>
-						<p>{{ post.date }}</p>
+				{% for post in site.data.blog %}{% if post.category == 'project' %}
+					<li {% if post.title %}class="hasTitle"{% endif %}>
+						<a class="thumb" href="{{site.baseurl}}{{ post.url }}" style="background-image: url({{site.baseurl}}img/blogThumbs/{{ post.img }});">
+							<h4>{{ post.name }}</h4>
+							<p>{{ post.date }}</p>
+						</a>
 					</li>
-				{% endunless %}{% endfor %}
+				{% endif %}{% endfor %}
 			</ul>
 		</section>
-		<section id="work">
-			<h3>Work</h3>
-			<p>Blog posts about web development and design.</p>
+
+		<section id="stories">
+			<h3>Stories</h3>
 			<ul>
-				{% for post in site.data.blog %}{% if post.work %}
-					<li>
-						<a class="thumb" href="{{site.baseurl}}{{ post.url }}"><img src="/img/blogThumbs/{{ post.img }}" alt="{{ post.name }}" width="279" height="92" /></a>
-						<h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.name }}</a></h4>
-						<p>{{ post.date }}</p>
+				{% for post in site.data.blog %}{% if post.category == 'story' %}
+					<li {% if post.title %}class="hasTitle"{% endif %}>
+						<a class="thumb" href="{{site.baseurl}}{{ post.url }}" style="background-image: url({{site.baseurl}}img/blogThumbs/{{ post.img }});">
+							<h4>{{ post.name }}</h4>
+							<p>{{ post.date }}</p>
+						</a>
+					</li>
+				{% endif %}{% endfor %}
+			</ul>
+		</section>
+
+		<section id="articles">
+			<h3>Articles</h3>
+			<ul>
+				{% for post in site.data.blog %}{% if post.category == 'article' %}
+					<li {% if post.title %}class="hasTitle"{% endif %}>
+						<a class="thumb" href="{{site.baseurl}}{{ post.url }}" style="background-image: url({{site.baseurl}}img/blogThumbs/{{ post.img }});">
+							<h4>{{ post.name }}</h4>
+							<p>{{ post.date }}</p>
+						</a>
 					</li>
 				{% endif %}{% endfor %}
 			</ul>

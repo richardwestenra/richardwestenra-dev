@@ -1,17 +1,19 @@
 - name: "Automating Git deployment setup with shell scripts"
   id: gitDeploy
   url: automating-git-deployment/
-  img: code.png
+  img: gitDeploy.png
   date: February 2015
-  work: true
+  category: article
+  title: false
   featured: false
 
 - name: "Adding non-core feature-detects with Grunt-Modernizr"
   id: gruntModernizr
   url: grunt-modernizr/
-  img: code.png
+  img: gruntModernizr.png
   date: February 2015
-  work: true
+  category: article
+  title: false
   featured: false
 
 - name: "Case Study: Redesigning the Arcus mobile app"
@@ -19,7 +21,8 @@
   url: arcus-redesign/
   img: arcus.png
   date: January 2015
-  work: true
+  category: article
+  title: true
   featured: false
 
 - name: ISS Screensaver
@@ -27,6 +30,8 @@
   url: live-iss-screensaver/
   img: iss.jpg
   date: June 2014
+  category: project
+  title: true
   featured: true
 
 - name: Dogenerator
@@ -34,6 +39,8 @@
   url: doge/
   img: dogenerator.jpg
   date: June 2014
+  category: project
+  title: true
   featured: true
 
 - name: If Daily Mail readers wrote the headlines
@@ -41,6 +48,8 @@
   url: daily-mail/
   img: dailymail.png
   date: March 2014
+  category: project
+  title: false
   featured: true
 
 - name: Click the button
@@ -48,13 +57,17 @@
   url: click-the-button/
   img: click.png
   date: July 2013
+  category: project
+  title: true
   featured: false
 
-- name: "xkcd’s &#8216;Time&#8217; – Animated Time-lapse"
+- name: "xkcd's 'Time' - Animated Time-lapse"
   id: xkcd
   url: xkcds-time-animated-time-lapse/
-  img: xkcd.png
+  img: time.png
   date: March 2013
+  category: project
+  title: false
   featured: true
 
 - name: The Truth about Sport
@@ -62,6 +75,8 @@
   url: the-truth-about-sport/
   img: sport.png
   date: September 2012
+  category: story
+  title: true
   featured: false
 
 - name: Weekly/Monthly Rental Rate Converter
@@ -69,6 +84,8 @@
   url: weekly-monthly-rental-rate-converter/
   img: converter.png
   date: October 2011
+  category: project
+  title: true
   featured: false
 
 - name: Top 7 Most Mind-Blowing Creatures of the Deep
@@ -76,6 +93,8 @@
   url: top-7-most-mind-blowing-creatures-of-the-deep/
   img: creaturesOfTheDeep.jpg
   date: September 2011
+  category: story
+  title: true
   featured: true
 
 - name: Operation Heart of Darkness
@@ -83,6 +102,8 @@
   url: operation-heart-of-darkness/
   img: heartOfDarkness.jpg
   date: March 2011
+  category: story
+  title: true
   featured: true
 
 - name: Will the Three Strikes policy work?
@@ -90,6 +111,8 @@
   url: will-the-three-strikes-policy-work/
   img: threeStrikes.png
   date: January 2010
+  category: story
+  title: true
   featured: false
 
 - name: Photos from my recent trips to space
@@ -97,6 +120,8 @@
   url: photos-from-my-recent-trips-to-space/
   img: tripToSpace.png
   date: January 2010
+  category: story
+  title: true
   featured: false
 
 - name: "Great Winter Roadtrip &#8211; Highlights from the 2009 Season"
@@ -104,6 +129,8 @@
   url: great-winter-roadtrip/
   img: greatWinterRoadtrip.png
   date: December 2009
+  category: story
+  title: true
   featured: false
 
 - name: An open letter to Countdown Church Corner
@@ -111,6 +138,8 @@
   url: an-open-letter-to-countdown-church-corner/
   img: countdown.jpg
   date: July 2009
+  category: story
+  title: true
   featured: false
 
 # - name: Spunday

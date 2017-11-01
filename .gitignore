@@ -2,7 +2,8 @@
 
 # Ignore hidden folders #
 # This takes care of .tmp, .sass-cache, and many others #
-.*/
+.tmp
+.sass-cache
 
 # Ignore OS generated files #
 .DS_Store*

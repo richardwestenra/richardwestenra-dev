@@ -32,6 +32,13 @@
     "load-grunt-tasks": "~0.2.0",
     "time-grunt": "~0.2.8"
   },
+  "scripts": {
+    "build": "grunt",
+    "check": "grunt check",
+    "deploy": "grunt deploy",
+    "start": "grunt serve",
+    "test": "grunt test"
+  },
   "engines": {
     "node": ">=0.8.0"
   }
